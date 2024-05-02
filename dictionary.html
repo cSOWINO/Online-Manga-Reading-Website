@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>MangaDub</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="shortcut icon" href="icon.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar" aria-label="">
+              <link rel="stylesheet" href="FiverrCSS.css">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+              <a href="index.html" class="logo">
+                <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              MangaDub
+            </a>
+              <ul class="menu-links">
+                <li><a href="dictionary.html">Manga's</a></li>
+                <li><a href="Mix.html">Most Populer</a></li>
+                <li><a href="Mix.html">New releases</a></li>
+                <li><a href="An & Sp.html">Announcements</a></li>
+                <li><a href="Premium.html">Premium</a></li>
+                <li><a href="Executiveteam.html">ExecutiveTeam</a></li>
+                <li class="join-btn"><a href="signup.php">Join Us</a></li>
+                <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+              </ul>
+              <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+            </nav>
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+  
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+  
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+          </header>
+          <br><br><br><br>
+<!-- Bootstrap JS and dependencies (Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<div class="headerMid">
+    <h1 class="titleTop"><a href="index.html">MangaDub</a></h1>
+    <h2 class="titleBot">High Quality Manga</h2>
+    <div class="cleaner"></div>
+</div><br>
+
+
+<div class="headerTop">
+    <div>
+        <form class="d-flex" name="searchForm" id="searchForm">
+            <input type="text" class="searchText" placeholder="Search Manga..." name="searchBar" size="50">
+            <button type="button" class="searchButton" onclick="searchManga()"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div><br>
+
+        <div class="middle">
+
+            <form class="formDictionary" method="GET" action="Mix.html">
+
+                <label class="labelDictionaryTitle">Genres</label><br/>
+                <input type="checkbox" class="checkbox" name="action" value="action"/>
+                <label class="labelDictionary">Action</label>
+                <input type="checkbox" class="checkbox" name="adventure" value="adventure"/>
+                <label class="labelDictionary">Adventure</label>
+                <input type="checkbox" class="checkbox" name="comedy" value="comedy"/>
+                <label class="labelDictionary">Comedy</label>
+                <input type="checkbox" class="checkbox" name="fantasy" value="fantasy"/>
+                <label class="labelDictionary">Fantasy</label>
+                <input type="checkbox" class="checkbox" name="historical" value="historical"/>
+                <label class="labelDictionary">Historical</label>
+                <input type="checkbox" class="checkbox" name="horror" value="horror"/>
+                <label class="labelDictionary">Horror</label>
+                <input type="checkbox" class="checkbox" name="martialArts" value="martialArts"/>
+                <label class="labelDictionary">Martial Arts</label>
+                <input type="checkbox" class="checkbox" name="mystery" value="mystery"/>
+                <label class="labelDictionary">Mystery</label>
+                <input type="checkbox" class="checkbox" name="romance" value="romance"/>
+                <label class="labelDictionary">Romance</label>
+                <input type="checkbox" class="checkbox" name="supernatural" value="supernatural"/>
+                <label class="labelDictionary">Supernatural</label><br />
+                <input type="checkbox" class="checkbox" name="drama" value="drama"/>
+                <label class="labelDictionary">Drama</label>
+                <input type="checkbox" class="checkbox" name="shounen" value="shounen"/>
+                <label class="labelDictionary">Shounen</label>
+                <input type="checkbox" class="checkbox" name="schoolLife" value="schoolLife"/>
+                <label class="labelDictionary">School Life</label>
+                <input type="checkbox" class="checkbox" name="shoujo" value="shoujo"/>
+                <label class="labelDictionary">Shoujo</label>
+                <input type="checkbox" class="checkbox" name="genderBender" value="genderBender"/>
+                <label class="labelDictionary">Gender Bender</label>
+                <input type="checkbox" class="checkbox" name="josei" value="josei"/>
+                <label class="labelDictionary">Josei</label>
+                <input type="checkbox" class="checkbox" name="psychological" value="psychological"/>
+                <label class="labelDictionary">Psychological</label>
+                <input type="checkbox" class="checkbox" name="seinen" value="seinen"/>
+                <label class="labelDictionary">Seinen</label>
+                <input type="checkbox" class="checkbox" name="sliceOfLife" value="sliceOfLife"/>
+                <label class="labelDictionary">Slice of Life</label>
+                <input type="checkbox" class="checkbox" name="sciFi" value="sciFi"/>
+                <label class="labelDictionary">Sci-fi</label><br />
+                <input type="checkbox" class="checkbox" name="ecchi" value="ecchi"/>
+                <label class="labelDictionary">Ecchi</label>
+                <input type="checkbox" class="checkbox" name="harem" value="harem"/>
+                <label class="labelDictionary">Harem</label>
+                <input type="checkbox" class="checkbox" name="mature" value="mature"/>
+                <label class="labelDictionary">Mature</label>
+                <input type="checkbox" class="checkbox" name="tragedy" value="tragedy"/>
+                <label class="labelDictionary">Tragedy</label>
+                <input type="checkbox" class="checkbox" name="sports" value="sports"/>
+                <label class="labelDictionary">Sports</label>
+                <input type="checkbox" class="checkbox" name="adult" value="adult"/>
+                <label class="labelDictionary">Adult</label>
+                <input type="checkbox" class="checkbox" name="oneShot" value="oneShot"/>
+                <label class="labelDictionary">One Shot</label>
+                <input type="checkbox" class="checkbox" name="smut" value="smut"/>
+                <label class="labelDictionary">Smut</label>
+                <input type="checkbox" class="checkbox" name="mecha" value="mecha"/>
+                <label class="labelDictionary">Mecha</label><br /><br />
+
+                <button type="submit" id="dictionaryButton" name="dictionaryButton">Search</button>
+                
+            </form></div>
+
+
+            <div class="highlightBot">
+                <div class="row" id="root">
+                    <!-- Manga items will be dynamically added here based on search results -->
+                </div>
+            </div>
+       
+      
+      
+            <script>
+                const mangaList = [
+                    { title: 'One Piece', image: 'One Piece Cover.jpeg', link: 'One Piece.html' },
+                    { title: 'Boruto', image: 'Boruto.jpeg', link: 'manga6.html' },
+                    { title: 'Kagurabachi', image: 'Kagurabachi Latest.jpg', link: 'manga6.html' },
+                    { title: 'Jujutsu Kaisen', image: 'Jujutsu Kaisen V24.jpg', link: 'manga6.html' },
+                    { title: 'Chainsaw Man', image: 'Chainsaw Man (Colored Edition).jpg', link: 'manga6.html' },
+                    { title: 'Blue Lock', image: 'Blue Lock volume 25.jpeg', link: 'manga6.html' },
+                    { title: 'Kaiju', image: 'Kaiju V8.jpg', link: 'manga6.html' },
+                    { title: 'Frieren', image: 'Frieren.jpg', link: 'manga6.html' },
+                    { title: 'Oshi No Ko', image: 'Oshi No Ko V11.jpg', link: 'manga6.html' },
+                    { title: 'Record Of Regnarok', image: 'Record Of Regnarok.jpg', link: 'manga6.html' },
+                    { title: 'Berserkar', image: 'Berserker New.jpg', link: 'manga6.html' },
+                    { title: 'Attack on Titan', image: 'Attack on Titan Volume 1 Cover.jpeg', link: 'manga6.html' },
+                    { title: 'Demon Slayer', image: 'Demon Slayer_ Kimetsu no Yaiba, Vol_ 23.jpeg', link: 'manga6.html' },
+                    { title: 'Bleach', image: 'Bleach V1.jpg', link: 'manga6.html' },
+                    { title: 'Hunter X Hunter', image: 'Hunter X Hunter.jpeg', link: 'manga6.html' },
+                    { title: 'My Hero Academia', image: 'MHA VOL 37.jpeg', link: 'manga6.html' },
+                    { title: 'Hells Paradise', image: 'Hells Paradise.jpg', link: 'manga6.html' },
+                    { title: 'One Punch Man', image: 'One Punch Man.jpg', link: 'manga6.html' },
+                    { title: 'Slime', image: 'That Time I Got Reincarneted As a Slime.jpg', link: 'manga6.html' },
+                    { title: 'Fire Force', image: 'Fire Force.jpg', link: 'manga6.html' },
+                    { title: 'Kingdoms', image: 'Kingdoms', link: 'manga6.html' },
+                    { title: 'Haikyuu', image: 'Haikyuu.jpg', link: 'manga6.html' },
+                    { title: 'Rent A Girlfriend', image: 'Rent A Girlfriend.jpg', link: 'manga6.html' },
+                    { title: 'Classrom OF  The Elite', image: 'Classrom OF  The Elite Year2.jpg', link: 'manga6.html' },
+                    { title: 'Love Is War', image: 'Love Is War.jpg', link: 'manga6.html' },
+                    { title: 'Vinland Saga', image: 'Vinland Saga.jpg', link: 'manga6.html' },
+                    { title: 'Vagabond', image: 'Vagabond.jpg', link: 'manga6.html' },
+                    { title: 'Slam Dunk', image: 'Slam Dunk.jpg', link: 'manga6.html' },
+                    { title: 'Zoom 100', image: 'Zoom 100.jpg', link: 'manga6.html' },
+                    { title: 'Tsuiraku JK to Haijin Kyoushi', image: 'Tsuiraku JK to Haijin Kyoushi.jpg', link: 'manga6.html' },
+                    { title: 'Spy X Family', image: 'Spy X Family.jpg', link: 'manga6.html' },
+                    { title: 'Black Clover', image: 'Black Clover V35.jpg', link: 'manga6.html' },
+                    { title: 'Jujutsu Kaisen', image: 'Jujutsu Kaisen Vol 1.jpeg', link: 'manga6.html' },
+                    { title: 'Chainsaw Man', image: 'Chainsaw Man BW.jpg', link: 'manga6.html' },
+                    { title: 'Berserk', image: 'Berserk 27.jpeg', link: 'manga6.html' },
+                    { title: 'DeathNote', image: 'DeathNote.jpg', link: 'manga6.html' },
+                    { title: 'Soul Eater', image: '33.jpg', link: 'manga6.html' },
+                    { title: 'Promise NeverLand', image: '32.jpg', link: 'manga6.html' },
+                    { title: 'Bleach', image: 'All the Bleach Covers list.jpeg', link: 'manga6.html' },
+                    { title: 'Sket Dance', image: '30.jpg', link: 'manga6.html' },
+                    { title: 'Rurouni Kenshin', image: '28.jpg', link: 'manga6.html' },
+                    { title: 'One Punch Man', image: '27.jpg', link: 'manga6.html' },
+                    { title: 'Naruto', image: 'Naruto.jpg', link: 'manga6.html' },
+                    { title: 'Noragami', image: '25.jpg', link: 'manga6.html' },
+                    { title: 'Dr.Stone', image: 'Dr. Stone.jpg', link: 'manga6.html' },
+                    { title: 'Seven SpellsBlade', image: 'Nanatsu no Maken ga Shihai Suru.jpg', link: 'manga6.html' },
+                    { title: 'Neon Genesis Evangelion', image: 'Neon Genesis Evangelion.jpg', link: 'manga6.html' },
+                    { title: 'Mob Psycho 100', image: '21.jpg', link: 'manga6.html' },
+                    { title: 'The Ancient Magus Bride', image: '20.jpg', link: 'manga6.html' },
+                    { title: 'Kimi ni Todoke', image: '19.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Ao Haru Ride', image: '17.jpg', link: 'manga6.html' },
+                    { title: 'Kamisama Kiss', image: '16.jpg', link: 'manga6.html' },
+                    { title: 'Maid Sama!', image: '15.jpg', link: 'manga6.html' },
+                    { title: 'Horimiya', image: 'Horimiya.jpg', link: 'manga6.html' },
+                    { title: 'Gintama', image: '11.jpg', link: 'manga6.html' },
+                    { title: 'Call of the Night.jpg', image: 'Call of the Night.jpg', link: 'manga6.html' },
+                    { title: 'Assassination Classroom', image: 'Assassination Classroom.jpg', link: 'manga6.html' },
+                    { title: 'Jinmen', image: 'Jinmen.jpg', link: 'manga6.html' },
+                    { title: 'Fullmetal Alchemist', image: '7.jpg', link: 'manga6.html' },
+                    { title: 'Boruto', image: 'Boruto_ Naruto Next Generation.jpg', link: 'manga6.html' },
+                    { title: 'Code Geass', image: '5.jpg', link: 'manga6.html' },
+                    { title: 'Yona of Dawn', image: '2.jpg', link: 'manga6.html' },
+                    { title: 'Snow White with the Red Hair', image: '1.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                    { title: 'Kodocha', image: '18.jpg', link: 'manga6.html' },
+                        
+
+
+                    // Add more manga items as needed
+                ];
+            
+                const searchManga = () => {
+                    const searchTerm = document.forms['searchForm']['searchBar'].value.toLowerCase();
+                    const filteredManga = mangaList.filter((manga) => manga.title.toLowerCase().includes(searchTerm));
+                    displayItem(filteredManga);
+                };
+            
+                const displayItem = (items) => {
+                    const rootElement = document.getElementById('root');
+                    
+                    if (items.length > 0) {
+                        rootElement.innerHTML = items.map((item) => {
+                            const { title, image, link } = item;
+                            return `
+                                <div class='col'>
+                                    <div class='manga'>
+                                        <a href='${link}'><img class='mangaImg' src='${image}' alt='${title}'></a>
+                                        <a href='${link}'><p class='mangaTitle'>${title}</p></a>
+                                    </div>
+                                </div>`;
+                        }).join('');
+                    } else {
+                        // Display a message when no search results are found
+                        rootElement.innerHTML = "<p>No matching manga found</p>";
+                    }
+                };
+            
+                // Display all manga items initially
+                displayItem([]);
+            </script>
+
+
+
+            
+    
+        
+            <div class="container">
+            <div class="mangaDictionary">
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="33.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Soul Eater</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="32.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Promise NeverLand</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="All the Bleach Covers list.jpeg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Bleach</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="30.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Sket Dance</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="29.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">AOT</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="28.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Rurouni Kenshin</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="27.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">OPM</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Naruto.jpeg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Naruto</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="25.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Noragami</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Dr. Stone.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Dr.Stone</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Nanatsu no Maken ga Shihai Suru.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Seven SpellsBlade</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Neon Genesis Evangelion.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Neon Genesis Evangelion</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="21.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Mob Psycho 100</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="20.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">The Ancient Magus' Bride</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="19.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Kimi ni Todoke</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="18.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Kodocha</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="17.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Ao Haru Ride</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="16.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Kamisama Kiss</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="15.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Maid Sama!</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Horimiya.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Horimiya</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Hunter X Hunter.jpeg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">HunterXHunter</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="12.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Haikyuu</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="11.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Gintama</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Call of the Night.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Call Of The Night</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Assassination Classroom.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Assasination Classroom</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Jinmen.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Jinmen</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="7.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Fullmetal Alchemist</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Boruto_ Naruto Next Generation.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Boruto</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="5.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Code Geass</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="4.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">MHA</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="3.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Bleach</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="2.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Yona of Dawn</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="1.jpg" alt=""></a>
+                    <a href="manga6.html"><p class="mangaTitle">Snow White with the Red Hair</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Berserker New.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Berserkar</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Attack on Titan Volume 1 Cover.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Attack On Titan</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Demon Slayer_ Kimetsu no Yaiba, Vol_ 23.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Demon Slayer</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Bleach V1.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Bleach</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Hunter X Hunter.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">HunterXHunter</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="MHA VOL 37.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">My Hero Academia</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Hells Paradise.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Hell's Paradise</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="One Punch Man.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">One Punch Man</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="That Time I Got Reincarneted As a Slime.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Slime</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Fire Force.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Fire Force</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Kingdoms.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Kingdoms</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Haikyuu.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Haikyuu</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Rent A Girlfriend.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Rent a Girlfriend</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Classrom OF  The Elite Year2.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Classroom Of The Elite </p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Love Is War.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Love Is War</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Vinland Saga.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Vinland Saga</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Vagabond.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Vegabond</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Slam Dunk.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Slam Dunk</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Zoom 100.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Zoom 100</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Tsuiraku JK to Haijin Kyoushi.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Tsuiraku JK to Haijin Kyoushi</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Spy X Family.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Spy X Family</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Black Clover V35.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Black Clover</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Jujutsu Kaisen Vol 1.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">JJK</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Chainsaw Man BW.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Chainsaw Man</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="Berserk 27.jpeg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">Berserk</p></a>
+                </div>
+                <div class="manga">
+                    <a href="manga6.html"><img class="mangaImg" src="DeathNote.jpg"></a>
+                    <a href="manga6.html"><p class="mangaTitle">DeathNote</p></a>
+                </div>
+                <div class="cleaner"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm">
+              <li class="page-item">
+                <a class="page-link" href="about.html" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+              <li class="page-item"><a class="active" href="dictionary.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="Mix.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="An & Sp.html">. . . . .</a></li>
+              <li class="page-item"><a class="page-link" href="Premium.html">11</a></li>
+              <li class="page-item"><a class="page-link" href="Executiveteam.html">12</a></li>
+              <li class="page-item">
+                <a class="page-link" href="login.html" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div><br>
+
+        <footer>
+
+            <!-- Red Footer CSS File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="FooterCSS.css">
+    <div class="footer2">
+            <div class="content">
+              <div class="left box">
+                <div class="upper">
+                  <div class="topic">About us</div>
+                  <H6>At MangaDub, we are passionate about bringing the captivating world of manga to fans around the globe.</H6>
+                </div>
+                <div class="lower">
+                  <div class="topic">Contact us</div>
+                  <div class="phone">
+                    <a href="contact.html"><i class="fas fa-phone-volume"></i>+919875115061</a>
+                  </div>
+                  <div class="email">
+                    <a href="contact.html"><i class="fas fa-envelope"></i>210346620058@paruluniversity.ac.in</a>
+                  </div>
+                </div>
+              </div>
+              <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="contact.php">Contact Us</a></div>
+                <div><a href="terms.html">Terms Of service</a></div>
+                <div><a href="privacy.html">Privacy Policy</a></div>
+                <div><a href="cookies.html">Cookies</a></div>
+                <div><a href="request.php">Request Manga</a></div>
+              </div>
+             <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="Premium.html">
+                  <input type="text" placeholder="Enter email address">
+                  <input type="submit" name="" value="Send">
+                  <div class="media-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100029734134219&sk=about"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/ChIRaGV0007?t=LysyMMlwMCuBiqqk8ZGb-g&s=09"><i class="fab fa-twitter"></i></a>
+                    <a href="https://in.pinterest.com/vchira007/"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.linkedin.com/in/chirag-vasava-050784273"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/feed/you"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.com/channels/@me"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.tumblr.com/vasavachirag007"><i class="fab fa-tumblr"></i></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="bottom">
+             <p class="copyright">
+             <small>&copy; 2023  <a href="index.html">MangaDub  </a>All rights reserved</small></p>
+            </div>
+          </footer>
+    </body>
+</html>    

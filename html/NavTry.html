@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>MangaDub</title>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="shortcut icon" href="../img/icon.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+ <!-- Bootstrap CSS -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <!-- Include Bootstrap from MaxCDN -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>    
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/img/Ace1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin:auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width:50px;
+    cursor: pointer;
+}
+
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width:0;         /* width:100%;*/
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background:#009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width:100%;
+
+}
+
+button:hover{
+    border: none;
+}
+
+
+</style>
+</head>
+
+<body>
+    <header>
+<div class="banner">
+<div class="navbar">
+    <img src="../img/icon.png" class="logo" alt="Logo">
+    <ul>
+        <li><a href="../html/index.html">Home</a></li>
+        <li><a href="../html/login.html">Log in</a></li>
+        <li><a href="../html/dictionary.html">Manga Dictionary</a></li>
+        <li><a href="../html/Mix.html">New Releases</a></li>
+        <li><a href="../html/An & Sp.html">Announcements</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="content">
+    <h1>MangaDub</h1>
+    <p>
+        Our Vision and Mission:- At MangaDub, we are passionate about bringing the captivating world of manga to fans around the globe. 
+        <br>Our mission is to create a hub where manga enthusiasts can connect, discover, and immerse themselves in the diverse and enchanting universe of Japanese comics.
+    </p>
+    <div>
+        <button type="button"><span></span>WATCH MORE</button>
+        <button type="button"><span></span>SUBSCRIBE</button>
+    </div>
+</div>
+</header>
+</body>
+</html>

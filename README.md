@@ -39,3 +39,7 @@ Contributions are welcome! Feel free to fork the repository and submit pull requ
 ---
 
 Feel free to modify and expand upon this template as needed for your specific project details!
+
+## Screenshot
+
+![Online Manga Reading Website Preview](https://raw.githubusercontent.com/ChiragVasava/Online-Manga-Reading-Website/blob/main/img/001.png)

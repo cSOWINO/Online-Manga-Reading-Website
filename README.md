@@ -42,4 +42,4 @@ Feel free to modify and expand upon this template as needed for your specific pr
 
 ## Screenshot
 
-![Online Manga Reading Website Preview](https://raw.githubusercontent.com/ChiragVasava/Online-Manga-Reading-Website/blob/main/img/001.png)
+![Online Manga Reading Website Preview](img/001.png)

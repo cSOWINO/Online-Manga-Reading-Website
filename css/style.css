@@ -1853,7 +1853,21 @@ footer a{
     border: 0.4px solid #000000; /* 0.1em */
     border-radius: 20px; /* 2em */
 }
-}
 
-
-
+/* For Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Dark color for the thumb */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #222; /* Dark color for the track */
+  }
+  
+  /* For Firefox */
+  scrollbar-color: #333 #222; /* Dark color for the thumb and track in Firefox */
+  
